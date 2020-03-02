@@ -41,6 +41,6 @@ body {
     width: 50px; /* width of container */
     height: 65px;
     object-fit: none;
-    ;
+    object-position: -265px -260px;
     overflow: hidden;
 }

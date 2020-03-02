@@ -1,18 +1,20 @@
-var speed = 10 // the box will move by 10 pixels on every step
-var direction = 1; // 1 moves in the positive direction; -1 vice versa
-
 var boxElement = document.getElementById('plyr');
 var player = document.getElementById('image')
 var boxLeftPos = boxElement.offsetLeft
 var boxTopPos = boxElement.offsetTop
 var orientation;
+var mapH = document.getElementById('bodyer').clientHeight - 75
+var mapW = document.getElementById('bodyer').clientWidth - 50
 document.getElementById("input-output").innerText = 'X: '+boxTopPos+' Y: '+boxLeftPos+' Key: N/A'
 document.addEventListener('keydown', e => {
-    
+    // check for map resize
+    mapH = document.getElementById('bodyer').clientHeight - 75;
+    mapW = document.getElementById('bodyer').clientWidth - 50;
+
     (e.which == 38 && boxTopPos >= -5 ? playerMove(-2,'-0px -120px',0) : '');  //Walk U
-    (e.which == 40 && boxTopPos <= 265 ? playerMove(2,'-00px -00px',0) : '');  //Walk D
+    (e.which == 40 && boxTopPos <= mapH ? playerMove(2,'-00px -00px',0) : '');  //Walk D
     (e.which == 37 && boxLeftPos >= -1 ? playerMove(-1,'-0px -65px',0) : '');  //Walk L
-    (e.which == 39 && boxLeftPos <= 417 ? playerMove(1,'-0px -65px',0) : '');  //Walk R
+    (e.which == 39 && boxLeftPos <= mapW ? playerMove(1,'-0px -65px',0) : '');  //Walk R
     (e.which == 87 ? playerMove(2,'-530px -130px',1) : '');  //Punch U
     (e.which == 83 ? playerMove(-2,'-530px -0px',1) : ''); //Punch D
     (e.which == 65 ? playerMove(1,'-530px -190px',1) : '');  //Punch R

@@ -24,6 +24,7 @@ body {
     border: 2px solid #000;
     height: 50vh;
     width: 50vw;
+    max-width: 480px;
     z-index: 0;
     position: relative;
     background: url('https://i.pinimg.com/600x315/f0/da/83/f0da830ebd0b1190674ab0fe5b4b8d22.jpg') no-repeat;

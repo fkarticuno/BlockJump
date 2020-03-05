@@ -38,16 +38,27 @@ body {
 }
 
 #image {
-    width: 50px; /* width of container */
+    width: 50px; 
     height: 65px;
     object-fit: none;
     object-position: -265px -260px;
     overflow: hidden;
 }
 #mob1_image {
-    width: 50px; /* width of container */
+    width: 50px; 
     height: 65px;
     object-fit: none;
-    object-position: -265px -260px;
-    overflow: hidden;
+    object-position: 0% 0%;    
+}
+.mob1 {
+    width: 50px;
+    height: 65px;
+    position: absolute;
+    top: 60%;
+    right: 70%;
+    z-index: 1;
+    filter: hue-rotate(180deg)
+    /*filter: none | blur() | brightness() | contrast() | drop-shadow() | grayscale() | 
+    hue-rotate() | invert() | opacity() | saturate() | sepia() | url() | initial | inherit;
+     https://www.w3docs.com/snippets/css/how-to-change-the-color-of-png-image-using-css.html */
 }

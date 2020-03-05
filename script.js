@@ -27,6 +27,7 @@ document.addEventListener('keydown', e => {
     (e.which == 32 ? toggleMusic() : '')
     document.getElementById("input-output").innerText = 'X: '+boxTopPos+' Y: '+boxLeftPos+' Key: '+e.which
     //console.log('X: ',boxTopPos, 'Y: ',boxLeftPos, 'Key:', e.which)
+    // setMobActivity() // WARNING stacks with random activity, use one or the other.
 })
 
 function modifySprite(orientation, position, attack) {
@@ -77,7 +78,7 @@ function restU_D(orientation) {
     }
 }
 // Music
-var bgSound1 = document.getElementById('bgSound2')
+var bgSound1 = document.getElementById('bgSound1')
 bgSound1.loop = true
 function toggleMusic() {
     var curTime = bgSound1.currentTime
